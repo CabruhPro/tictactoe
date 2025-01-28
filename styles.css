@@ -1,0 +1,32 @@
+.gameboard {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 50vh;
+}
+
+.gameboard div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.gameboard div:nth-child(3n-2) {
+    border-left: none;
+}
+.gameboard div:nth-child(3n) {
+    border-right: none;
+}
+.gameboard div:nth-child(-n+3) {
+    border-top: none;
+}
+.gameboard div:nth-child(n+7) {
+    border-bottom: none;
+}
+
+.gameboard div:hover {
+    background-color: beige;
+
+}
